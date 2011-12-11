@@ -11,15 +11,17 @@ Usage
 
 Set up the client side so we can access the middleware
 
-```javascript
+```html
 
 <script src="dnode.js"></script>
 <script src="dnode.cookie.js"></script>
+````
+
+```javascript
 
 DNode
   .use(dnodeCookie)
   .connect()
-
 ````
 
 We can now alter the cookies from the server with DNode!
@@ -48,7 +50,6 @@ DNode()
 
   })
   .listen(app)
-
 ````
 
 Did I mention this doubles as the jquery-cookie plugin?
@@ -56,7 +57,6 @@ Did I mention this doubles as the jquery-cookie plugin?
 ```javascript
 
 var wheresThe = $.cookie('monster')
-
 ````
 
 Authors
