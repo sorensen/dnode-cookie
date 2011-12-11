@@ -1,0 +1,28 @@
+{
+  "name": "dnode-cookie"
+, "description": "Cookie manipulation for DNode"
+, "version": "0.0.1"
+, "authors": [
+    "Beau Sorensen"
+  , "Klaus Hartl"
+  ]
+, "repository": {
+    "type": "git"
+  , "url": "git://github.com/sorensen/dnode-cookie.git"
+  }
+, "directories": {
+    "lib": "./lib"
+  }
+, "keywords": [
+    "dnode" 
+  , "cookie"
+  ]
+, "main": "./index"
+, "dependencies": {
+    "dnode": ">= 0.8.1"
+  }
+, "browserify": "lib/dnode-cookie.js"
+, "engines": {
+    "node": ">= 0.6.2"
+  }
+}
