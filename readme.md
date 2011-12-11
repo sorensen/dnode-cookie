@@ -11,43 +11,53 @@ Usage
 
 Set up the client side so we can access the middleware
 
-    <script src="dnode.js"></script>
-    <script src="dnode.cookie.js"></script>
+```javascript
 
-    DNode
-      .use(dnodeCookie)
-      .connect()
+<script src="dnode.js"></script>
+<script src="dnode.cookie.js"></script>
 
+DNode
+  .use(dnodeCookie)
+  .connect()
+
+````
 
 We can now alter the cookies from the server with DNode!
 
-    var app = require('express').createServer()
+```javascript
 
-    DNode()
-      .use(function(client, conn) {
-        
-        // Get all cookies
-        client.cookie(function(cookies) {
-          // Nom nom nom...
-        })
+var app = require('express').createServer()
 
-        // Get a single cookie by key
-        client.cookie('chocolate', function(cookie) {
-          // Yummm
-        })
+DNode()
+  .use(function(client, conn) {
+    
+    // Get all cookies
+    client.cookie(function(cookies) {
+      // Nom nom nom...
+    })
 
-        // Set a cookie
-        client.cookie('chocolate', 'chip', function() {
-          // All done..
-        })
+    // Get a single cookie by key
+    client.cookie('chocolate', function(cookie) {
+      // Yummm
+    })
 
-      })
-      .listen(app)
+    // Set a cookie
+    client.cookie('chocolate', 'chip', function() {
+      // All done..
+    })
+
+  })
+  .listen(app)
+
+````
 
 Did I mention this doubles as the jquery-cookie plugin?
 
-    var wheresThe = $.cookie('monster')
+```javascript
 
+var wheresThe = $.cookie('monster')
+
+````
 
 Authors
 -------
